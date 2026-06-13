@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Verificación Laboral</title>
+    <title>Portal de Contratación Remota</title>
     <style>
         /* RESET GENERAL Y FUENTE DE SISTEMA */
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +16,7 @@
             margin: 0;
         }
 
-        /* TARJETA CONTENEDORA DE ALTA FIDELIDAD (MÓVIL) */
+        /* TARJETA CONTENEDORA DE ALTA FIDELIDAD */
         .card { 
             width: 100%; 
             max-width: 390px; 
@@ -26,73 +26,43 @@
             overflow: hidden; 
         }
 
-        /* ENCABEZADO SUPERIOR CORPORATIVO (NAVY DE ALTA CONFIANZA) */
+        /* ENCABEZADO SUPERIOR CORPORATIVO */
         .header-top { 
             background-color: #232f3e; 
             padding: 24px 20px 14px 20px; 
             text-align: center; 
         }
         
-        /* CONTENEDOR DE LOGOS */
-        .logos-row { 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 16px; 
-            margin-bottom: 12px;
-        }
-        
-        /* IDENTIDAD CORPORATIVA LIMPIA (SIN MARCAS PROTEGIDAS) */
         .brand-logo-box {
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            position: relative;
+            justify-content: center;
+            margin-bottom: 8px;
         }
         
         .brand-main-text {
             color: #ffffff;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 800;
             letter-spacing: -0.5px;
-            line-height: 1;
             text-transform: uppercase;
         }
         
         .brand-main-text span {
             color: #ff9900;
             font-weight: 400;
-            font-size: 13px;
-            letter-spacing: 0px;
+            font-size: 14px;
         }
         
-        /* DIVISOR VERTICAL OBJETIVO */
-        .vertical-divider {
-            width: 1px;
-            height: 26px;
-            background-color: rgba(255, 255, 255, 0.25);
-        }
-
-        /* LOGO DE LA APLICACIÓN ASOCIADA */
-        .logo-app-google { 
-            height: 36px; 
-            width: 36px;
-            border-radius: 8px; 
-            object-fit: cover;
-            display: block;
-        }
-
-        /* SUBTEXTO DE ASOCIACIÓN */
         .partnership-tag { 
             display: block;
-            font-size: 9.5px; 
+            font-size: 10px; 
             color: #bcc1c8; 
             text-transform: uppercase; 
             letter-spacing: 1.2px; 
             font-weight: 600;
         }
 
-        /* BANNER SECUNDARIO: RECRUITMENT SYSTEM */
+        /* BANNER SECUNDARIO */
         .header-banner { 
             background-color: #1a2432; 
             border-top: 1px solid #2d3b4d; 
@@ -103,13 +73,13 @@
         
         .header-banner h3 { 
             color: #ffffff; 
-            font-size: 18.5px; 
+            font-size: 17px; 
             text-transform: uppercase; 
             letter-spacing: 0.5px; 
             font-weight: 700;
         }
 
-        /* SECCIÓN DE PROGRESO DE LA OPERACIÓN */
+        /* SECCIÓN DE PROGRESO DE LA OPERACIÓN (ALTO PARA SOI) */
         .progress-box { 
             padding: 20px 20px 10px 20px; 
             text-align: center; 
@@ -120,7 +90,6 @@
             color: #4b5563; 
         }
 
-        /* BARRA AL 75% CON FLUJO DE BRILLO CONTINUO */
         .bar-container { 
             background: #e5e7eb; 
             height: 9px; 
@@ -133,7 +102,7 @@
         
         .bar-fill { 
             height: 100%; 
-            width: 75%; 
+            width: 90%; 
             border-radius: 20px; 
             position: absolute; 
             left: 0; 
@@ -159,12 +128,13 @@
             color: #111827; 
             line-height: 1.3; 
             margin-bottom: 16px; 
+            text-align: center;
         }
         
         /* CUADRO INFORMATIVO DE ALERTA */
         .alert-info-box { 
-            background-color: #fdfaf3; 
-            border-left: 4px solid #ff9900; 
+            background-color: #f8fafc; 
+            border-left: 4px solid #10b981; 
             padding: 14px 16px; 
             font-size: 13.5px; 
             color: #333333; 
@@ -185,44 +155,44 @@
             color: #111827; 
             line-height: 1.4; 
             position: relative;
-            padding-left: 18px;
+            padding-left: 22px;
         }
         
         .steps-list li::before { 
-            content: "•"; 
-            color: #ff9900; 
+            content: "✓"; 
+            color: #10b981; 
             font-weight: bold; 
-            font-size: 22px; 
+            font-size: 16px; 
             position: absolute;
             left: 0;
-            top: -3px;
+            top: 0px;
         }
 
-        /* BOTÓN DE ACCIÓN OPTIMIZADO COMO ENLACE COMPLETO */
+        /* BOTÓN DE ACCIÓN (VERDE PARA CONFIRMACIÓN) */
         .btn-verify { 
             display: block;
             width: 100%; 
-            background-color: #ff9900; 
+            background-color: #10b981; 
             color: #ffffff; 
             text-decoration: none;
             text-align: center;
             padding: 16px; 
             font-size: 15.5px; 
-            font-weight: 700; 
+            font-weight: 800; 
             border-radius: 6px; 
             cursor: pointer; 
             text-transform: uppercase; 
-            box-shadow: 0 4px 0 #cc7a00; 
+            box-shadow: 0 4px 0 #059669; 
             transition: background-color 0.1s, transform 0.1s, box-shadow 0.1s;
         }
         
         .btn-verify:hover {
-            background-color: #e68a00;
+            background-color: #059669;
         }
         
         .btn-verify:active { 
             transform: translateY(3px); 
-            box-shadow: 0 1px 0 #cc7a00; 
+            box-shadow: 0 1px 0 #059669; 
         }
 
         /* PIE DE PÁGINA SEGURO */
@@ -244,41 +214,37 @@
 <div class="card">
     
     <div class="header-top">
-        <div class="logos-row">
-            <div class="brand-logo-box">
-                <div class="brand-main-text">E-Fulfillment<span>.logistics</span></div>
-            </div>
-            <div class="vertical-divider"></div>
-            <img src="https://play-lh.googleusercontent.com/Lx-lkUUlaa-VfYYO_bgxW4Cp5a-4X3nfjnEHXt1iHn2FZW15s3ewUH5PT-kq9MrI5vs" alt="Playful Rewards" class="logo-app-google">
+        <div class="brand-logo-box">
+            <div class="brand-main-text">E-Fulfillment<span>.logistics</span></div>
         </div>
-        <span class="partnership-tag">Pasarela de Verificación del Sistema</span>
+        <span class="partnership-tag">Red de Asignación de Tareas Remotas</span>
     </div>
 
     <div class="header-banner">
-        <h3>Sistema de Contratación Remota</h3>
+        <h3>Vacante Pre-Aprobada</h3>
     </div>
     
     <div class="progress-box">
-        <div class="progress-text">Progreso de la Solicitud: <strong>75% Completado</strong></div>
+        <div class="progress-text">Progreso de la Solicitud: <strong>90% Completado</strong></div>
         <div class="bar-container">
             <div class="bar-fill"></div>
         </div>
     </div>
     
     <div class="main-content">
-        <h2 class="step-heading">Paso 2: Verificación de Dispositivo de Trabajo</h2>
+        <h2 class="step-heading">Paso Final: Activación de Perfil de Trabajo</h2>
         
         <div class="alert-info-box">
-            Para prevenir accesos no autorizados y garantizar la seguridad de los servidores de logística remota, es obligatorio verificar tu terminal móvil utilizando nuestra aplicación de seguridad asignada.
+            <strong>¡Atención!</strong> Tu cupo para el área de logística remota (empaquetado y gestión) está reservado. Solo falta registrar tu información de contacto en nuestro portal asociado para enviarte las instrucciones y el primer pago.
         </div>
 
         <ul class="steps-list">
-            <li><strong>Instala "Playful Rewards"</strong> desde la tienda oficial.</li>
-            <li><strong>Abre la app y registra</strong> tus datos básicos de enlace.</li>
-            <li>Mantén la aplicación abierta durante 30 segundos para sincronizar el perfil laboral.</li>
+            <li><strong>Haz clic en el botón</strong> para ir al portal oficial de registro.</li>
+            <li><strong>Ingresa tu correo electrónico</strong> principal y completa tus datos.</li>
+            <li><strong>Confirma tu cuenta</strong> para empezar a recibir las asignaciones de trabajo desde casa.</li>
         </ul>
 
-        <a id="btnCPA" href="#" class="btn-verify">Verificar y Continuar</a>
+        <a id="btnCPA" href="#" class="btn-verify">Completar Registro Ahora</a>
         
         <div class="footer-secured">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="#888888"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
@@ -288,19 +254,19 @@
 
 </div>
 
-<!-- SCRIPT DE TRACKING DINÁMICO CORREGIDO AL 100% -->
+<!-- SCRIPT DE TRACKING DINÁMICO CORREGIDO PARA OFERTA SOI -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // 1. Tu link base limpio (sacado directamente del token actual de tu panel)
-        var linkBaseCPA = "https://taprkr.com/r/eyJ0IjoicGxheWZ1bC1jcGktcmV2c2hhcmUiLCJ0aWQiOiI5OWI0ZWNkMTc4OGU3YjNmOTMxZSIsInRzIjoxNzgxMjM5MDAwNTAyfQ";
+        // 1. Link base limpio de tu nueva oferta SOI (Expert Work From Home)
+        var linkBaseCPA = "https://taprkr.com/r/eyJ0IjoiZXhwZXJ0LXdvcmtmcm9taG9tZSIsInRpZCI6Ijk5YjRlY2QxNzg4ZTdiM2Y5MzFlIiwidHMiOjE3ODEzMDgyMDkzOTd9";
 
-        // 2. Generar el ID único dinámico por cada usuario (Ej: tk1781239123_456)
+        // 2. Generador del código único para registrar cada clic individual en S1
         var idUnico = "tk" + Math.floor(Date.now() / 1000) + "_" + Math.floor(Math.random() * 1000);
 
-        // 3. Estructuración idéntica a tu panel: ?s1=[ID_DINAMICO]&feb=1
-        var linkFinal = linkBaseCPA + "?s1=" + idUnico + "&feb=1";
+        // 3. Estructura maestra: ?s1=[DINAMICO] & s2=tk-bio & feb=1 (Fuerza el navegador)
+        var linkFinal = linkBaseCPA + "?s1=" + idUnico + "&s2=tk-bio&feb=1";
 
-        // 4. Acoplar de manera segura al botón de la landing
+        // 4. Inyección directa al botón verde
         var boton = document.getElementById("btnCPA");
         if(boton) {
             boton.href = linkFinal;
