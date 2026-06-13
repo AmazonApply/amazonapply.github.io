@@ -274,5 +274,24 @@
     });
 </script>
 
-</body>
-</html>
+</body> 
+    <!-- CONTADOR DE VISITAS INVISIBLE Y SEGURO -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Creamos una clave única para tu prelander usando tu nicho y fecha
+        const namespace = "mora_logistics_jobs_2026";
+        const key = "landing_visitas";
+        
+        // Llamada a la API externa para registrar la visita de forma silenciosa
+        fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+            .then(response => response.json())
+            .then(data => {
+                // Guarda el total en la consola del navegador por si quieres auditarlo
+                console.log("Visitas totales registradas en Prelander: " + data.value);
+            })
+            .catch(error => console.log("Contador en segundo plano activo."));
+    });
+</script>
+</html> 
+
+
