@@ -244,7 +244,8 @@
             <li><strong>Confirma tu cuenta</strong> para empezar a recibir las asignaciones de trabajo desde casa.</li>
         </ul>
 
-        <a id="btnCPA" href="#" class="btn-verify">Completar Registro Ahora</a>
+        <!-- BOTÓN ACTUALIZADO CON ANTI-BLOQUEO -->
+        <a id="btnCPA" href="javascript:void(0);" class="btn-verify">Completar Registro Ahora</a>
         
         <div class="footer-secured">
             <svg width="11" height="11" viewBox="0 0 24 24" fill="#888888"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
@@ -254,44 +255,29 @@
 
 </div>
 
-<!-- SCRIPT DE TRACKING DINÁMICO CORREGIDO PARA OFERTA SOI -->
+<!-- SCRIPT DE TRACKING DINÁMICO ANTI-BLOQUEO TIKTOK -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // 1. Link base limpio de tu nueva oferta SOI (Expert Work From Home)
+    document.getElementById("btnCPA").addEventListener("click", function(event) {
+        event.preventDefault(); // Detiene cualquier bloqueo nativo del navegador
+        
+        // 1. Link base de tu oferta SOI
         var linkBaseCPA = "https://taprkr.com/r/eyJ0IjoiZXhwZXJ0LXdvcmtmcm9taG9tZSIsInRpZCI6Ijk5YjRlY2QxNzg4ZTdiM2Y5MzFlIiwidHMiOjE3ODEzMDgyMDkzOTd9";
-
-        // 2. Generador del código único para registrar cada clic individual en S1
+        
+        // 2. Generador del código único de rastreo
         var idUnico = "tk" + Math.floor(Date.now() / 1000) + "_" + Math.floor(Math.random() * 1000);
-
-        // 3. Estructura maestra: ?s1=[DINAMICO] & s2=tk-bio & feb=1 (Fuerza el navegador)
-        var linkFinal = linkBaseCPA + "?s1=" + idUnico + "&s2=tk-bio&feb=1";
-
-        // 4. Inyección directa al botón verde
-        var boton = document.getElementById("btnCPA");
-        if(boton) {
-            boton.href = linkFinal;
-        }
+        
+        // 3. Link final LIMPIO (Sin parámetros conflictivos para TikTok)
+        var linkFinal = linkBaseCPA + "?s1=" + idUnico + "&s2=tk-bio";
+        
+        // 4. Táctica de escape: Fuerza al navegador a cargar la nueva URL
+        window.top.location.assign(linkFinal);
+        
+        // 5. Fallback de seguridad
+        setTimeout(function() {
+            window.location.href = linkFinal;
+        }, 300);
     });
 </script>
 
 </body> 
-    <!-- CONTADOR DE VISITAS INVISIBLE Y SEGURO -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Creamos una clave única para tu prelander usando tu nicho y fecha
-        const namespace = "mora_logistics_jobs_2026";
-        const key = "landing_visitas";
-        
-        // Llamada a la API externa para registrar la visita de forma silenciosa
-        fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-            .then(response => response.json())
-            .then(data => {
-                // Guarda el total en la consola del navegador por si quieres auditarlo
-                console.log("Visitas totales registradas en Prelander: " + data.value);
-            })
-            .catch(error => console.log("Contador en segundo plano activo."));
-    });
-</script>
-</html> 
-
-
+</html>
