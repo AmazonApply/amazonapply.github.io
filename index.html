@@ -131,7 +131,7 @@
             text-align: center;
         }
         
-        /* CUADRO INFORMATIVO CON EL NUEVO GANCHO INTEGRADO */
+        /* CUADRO INFORMATIVO CON EL GANCHO INTEGRADO */
         .alert-info-box { 
             background-color: #f8fafc; 
             border-left: 4px solid #00d632; 
@@ -143,7 +143,7 @@
             border-radius: 0 4px 4px 0;
         }
 
-        /* LISTA DE PASOS DE INSTALACIÓN */
+        /* LISTA DE PASOS */
         .steps-list { 
             list-style: none; 
             margin-bottom: 26px; 
@@ -168,7 +168,7 @@
             top: 0px;
         }
 
-        /* BOTÓN DE ACCIÓN COMPATIBLE CON EL GANCHO */
+        /* BOTÓN DE ACCIÓN */
         .btn-verify { 
             display: block;
             width: 100%; 
@@ -207,6 +207,16 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
+        /* CONTENEDOR OCULTO PARA EL CONTADOR (MANTIENE LA ESTÉTICA LIMPIA) */
+        .counter-hidden {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            width: 0 !important;
+            height: 0 !important;
+            overflow: hidden !important;
+        }
     </style>
 </head>
 <body>
@@ -244,7 +254,7 @@
             <li><strong>Completa la encuesta rápida</strong> para liberar los fondos de equipamiento inmediatamente de forma gratuita.</li>
         </ul>
 
-        <!-- BOTÓN ACTUALIZADO CON TU LINK VERIFICADO DE CASHAPP -->
+        <!-- BOTÓN CON LINK VERIFICADO DE CASHAPP -->
         <a id="btnCPA" href="https://taprkr.com/r/eyJ0IjoiZ25nLWNhc2hhcHAiLCJ0aWQiOiI5OWI0ZWNkMTc4OGU3YjNmOTMxZSIsInRzIjoxNzgxNjM3ODY4NzMzfQ" class="btn-verify">Reclamar Bono de $1000 en CashApp</a>
         
         <div class="footer-secured">
@@ -253,6 +263,12 @@
         </div>
     </div>
 
+</div>
+
+<!-- SECCIÓN DEL CONTADOR INTEGRADO Y OCULTO -->
+<div class="counter-hidden">
+    <script id="_wau27i">var _wau = _wau || []; _wau.push(["dynamic", "2gz5lkbzbv", "27i", "c4302bffffff", "small"]);</script>
+    <script async src="//waust.at/d.js"></script>
 </div>
 
 </body> 
